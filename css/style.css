@@ -6,17 +6,82 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
     height: 8vh;
-    background-color: #466FC3;
+    background-color: #0c191f;
+}
+
+
+ul {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between; 
+    width: 300px;
+}
+
+nav li{
+    position: relative;
+    list-style: none;
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav li::after{
+    content: '';
+    width: 0.01%;
+    height: 3px;
+    background-color: #E1CD43;
+    transition: 0.3s ease-in;
+}
+
+nav li:hover::after {
+    width: 100%;
+}
+
+
+a {
+    text-decoration: none;
+    color: #E1CD43;
+}
+
+.search-bar {
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 0;
+    background-color: #1f3a47;
+    color: #E1CD43;
+}
+
+input[type='text'] {
+    outline: none;
 }
 
 .main-page {
+    padding: 0 5%;
+
     height: 92vh;
     width: 100%;
-    background-image: url('../images/background\ image.jpg');
+    background-image:url('../images/wallpaper1.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
 
     display: flex;
     justify-content: flex-start;
@@ -45,6 +110,7 @@ nav {
 .content p {
     margin-top: 20px;
     font-size: 1.3rem;
+    color: #0c191f;
 }
 
 .content button {
@@ -55,7 +121,14 @@ nav {
     border-radius: 5px;
     background-color: #466FC3;
     cursor: pointer;
+    color: #0c191f;
 }
+
+.content button a{
+   
+    color: #0c191f;
+}
+
 
 .about {
     padding-top: 5%;

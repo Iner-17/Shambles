@@ -3,6 +3,9 @@ function openPopUp(videoId, startTime, endTime) {
     document.getElementById('videoFrame').src = videoUrl;
 
     document.querySelector('.popup-container').style.display = "block";
+    
+    // setTimeout(() => {document.querySelector('.popup-container').style.display = "none";}, ((endTime - startTime) * 1000) + 2)
+
 }
 
 function closePopup() {
